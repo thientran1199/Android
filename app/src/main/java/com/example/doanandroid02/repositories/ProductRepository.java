@@ -40,7 +40,7 @@ public class ProductRepository {
 
             @Override
             public void onFailure(Call<List<Product>> call, Throwable t) {
-
+                Log.d("TAG", "onFailure: ");
             }
         });
     }

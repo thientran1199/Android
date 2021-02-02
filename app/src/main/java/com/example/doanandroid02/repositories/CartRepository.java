@@ -44,10 +44,10 @@ public class CartRepository extends PayActivity {
     public void postOrder(DataUserCallBack<Order> dataUserCallBack){
         int id = sharedPreferences.getInt("id_customer",0);
         int user_id = sharedPreferences.getInt("user_id",0);
+        int status = sharedPreferences.getInt("status",0);
         String address = sharedPreferences.getString("address","");
-        String date = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault()).format(new Date());
-        Long total = sharedPreferences.getLong("total",0);
-        api.postOrder(id,date,address,total,notes = editMessages.getText().toString(),user_id)
+        String total = sharedPreferences.getLong("total",0);
+        api.postOrder(id,status,address,total = editMessages.getText().toString(),user_id)
                 .enqueue(new Callback<Order>() {
                     @Override
                     public void onResponse(Call<Order> call, Response<Order> response) {

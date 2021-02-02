@@ -19,7 +19,7 @@ import static com.example.doanandroid02.activity.LoginActivity.editPassword;
 import static com.example.doanandroid02.activity.RegisterActivity.editTextName;
 import static com.example.doanandroid02.activity.RegisterActivity.editTextEmail;
 import static com.example.doanandroid02.activity.RegisterActivity.editTextPass;
-import static com.example.doanandroid02.activity.RegisterActivity.editTextConfPass;
+
 
 
 public class UserRepository extends LoginActivity{
@@ -91,8 +91,7 @@ public class UserRepository extends LoginActivity{
     public void register(DataUserCallBack<Profile> registerDataCallBack){
         api.register(RegisterActivity.name = editTextName.getText().toString(),
                 RegisterActivity.email = editTextEmail.getText().toString(),
-                RegisterActivity.password = editTextPass.getText().toString(),
-                RegisterActivity.c_password = editTextConfPass.getText().toString())
+                RegisterActivity.password = editTextPass.getText().toString())
                 .enqueue(new Callback<Profile>() {
                     @Override
                     public void onResponse(Call<Profile> call, Response<Profile> response) {

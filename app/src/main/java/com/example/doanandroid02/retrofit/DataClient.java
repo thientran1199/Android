@@ -54,38 +54,38 @@ public interface DataClient {
     @FormUrlEncoded
     Call<Profile> register(@Field("name") String name,
                           @Field("email") String email,
-                          @Field("password") String password,
-                          @Field("c_password") String c_password
+                          @Field("password") String password
+
     );
 
     @POST("api/customers/create")
     @FormUrlEncoded
     Call<Customer> postCustomer(@Field("name") String name,
-                                @Field("sdt") String sdt,
+                                @Field("phone") String phone,
                                 @Field("address") String address,
-                                @Field("mail") String mail);
+                                @Field("email") String email);
 
     @GET("api/customers/{id}")
     Call<Customer> getCustomer(@Path("id") String id);
 
-    @POST("api/orders/create")
-    @FormUrlEncoded
-    Call<Order> postOrder(@Field("customer_id") int customer_id,
-                         @Field("ngaylap_hd") String ngaylap_hd,
-                         @Field("noi_nhan_hang") String noi_nhan_hang,
-                         @Field("tong_tien") Long tong_tien,
-                         @Field("ghi_chu") String ghi_chu,
-                         @Field("user_id") int user_id);
 
-    @GET("api/bills/{id}")
-    Call<Order> getBill(@Path("id") String id);
+
+    @GET("api/orders/{id}")
+    Call<Order> getOrder(@Path("id") String id);
 
     @POST("api/orderdetails/create")
     @FormUrlEncoded
-    Call<OrderDetail> postOrderDetail(@Field("bill_id") int bill_id,
+    Call<OrderDetail> postOrderDetail(@Field("order_id") int bill_id,
                                      @Field("product_id") int product_id,
-                                     @Field("so_luong_mua") int so_luong_mua,
-                                     @Field("don_gia") long don_gia);
+                                     @Field("quantity") int quantity,
+                                     @Field("price") long price);
     @GET("api/products/search")
     Call<List<Product>> searchProduct(@Query("q") String q);
+
+    @POST("api/orders/create")
+    @FormUrlEncoded
+    Call<Order> postOrder(@Field("customer_id") int customer_id,
+                          @Field("status") int status,
+                          @Field("address") String address,
+                          @Field("total") Long total);
 }

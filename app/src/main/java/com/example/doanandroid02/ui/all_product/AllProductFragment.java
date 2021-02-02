@@ -56,11 +56,11 @@ public class AllProductFragment extends Fragment implements MainContract.View {
 
     @Nullable
     @Override
-    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+    public View onCreateView(@NonNull LayoutInflater inflater,  ViewGroup container, @Nullable Bundle savedInstanceState) {
         super.onCreateView(inflater, container, savedInstanceState);
         View view = inflater.inflate(R.layout.fragment_product, container, false);
         progressBar = view.findViewById(R.id.progressProduct);
-        recyclerView = view.findViewById(R.id.recyclerview);
+        recyclerView = (RecyclerView) view.findViewById(R.id.recyclerview);
         mPresenter = new MainPresenter(this);
         mPresenter.loadProducts();
         return view;

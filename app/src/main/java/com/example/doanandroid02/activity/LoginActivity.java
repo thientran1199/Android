@@ -27,8 +27,9 @@ import java.util.List;
 public class LoginActivity extends AppCompatActivity implements MainContract.View {
 
     public static EditText editEmail, editPassword;
-    TextView textSignup;
+
     Button btLogin;
+    Button btSignUp;
     MainContract.Presenter mPresenter;
     public static String username;
     public static String password;
@@ -49,8 +50,9 @@ public class LoginActivity extends AppCompatActivity implements MainContract.Vie
 
         editEmail = findViewById(R.id.editEmailLogin);
         editPassword = findViewById(R.id.editPasswordLogin);
-        textSignup = findViewById(R.id.tv_sign_up);
+
         btLogin = findViewById(R.id.btLogin);
+        btSignUp = findViewById(R.id.btSignup);
         imageViewBackLogin = findViewById(R.id.imageViewBackLogin);
         mPresenter = new MainPresenter(this);
 
@@ -65,8 +67,7 @@ public class LoginActivity extends AppCompatActivity implements MainContract.Vie
                 }
             }
         });
-
-        textSignup.setOnClickListener(new View.OnClickListener() {
+        btSignUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), RegisterActivity.class);

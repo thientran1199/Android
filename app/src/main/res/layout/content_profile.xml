@@ -32,70 +32,16 @@
                 <LinearLayout style="@style/profileDetailsLayout">
 
                     <ImageView
-                        android:id="@+id/cartImage"
                         style="@style/profileDetailsImage"
                         android:src="@drawable/cart" />
 
                     <TextView
-                        android:id="@+id/cartName"
-                        style="@style/profileDetailsTextMain"
+                        android:id="@+id/Cart"
+                        android:text="Trung tâm hỗ trợ"
                         android:layout_gravity="center"
-                        android:text="Giỏ hàng" />
+                        style="@style/profileDetailsTextMain" />
 
                 </LinearLayout>
-
-                <View style="@style/proifleDetailsView" />
-
-                <LinearLayout style="@style/profileDetailsLayout">
-
-                    <ImageView
-                        android:id="@+id/nameBill"
-                        style="@style/profileDetailsImage"
-                        android:src="@drawable/smartphone" />
-
-                    <TextView
-                        android:id="@+id/nameTextView"
-                        style="@style/profileDetailsTextMain"
-                        android:layout_gravity="center"
-                        android:text="Đơn nạp thẻ và ứng dụng" />
-
-
-                </LinearLayout>
-
-                <View style="@style/proifleDetailsView" />
-
-                <LinearLayout style="@style/profileDetailsLayout">
-
-                    <ImageView
-                        style="@style/profileDetailsImage"
-                        android:src="@drawable/clock" />
-
-                    <TextView
-                        android:id="@+id/seen"
-                        style="@style/profileDetailsTextMain"
-                        android:layout_gravity="center"
-                        android:text="Sản phẩm đã xem" />
-
-                </LinearLayout>
-
-                <View style="@style/proifleDetailsView" />
-
-                <LinearLayout style="@style/profileDetailsLayout">
-
-                    <ImageView
-                        style="@style/profileDetailsImage"
-                        android:src="@drawable/user" />
-
-                    <TextView
-                        android:id="@+id/profile"
-                        style="@style/profileDetailsTextMain"
-                        android:layout_gravity="center"
-                        android:text="Thiết lập tài khoản" />
-
-                </LinearLayout>
-
-                <View style="@style/proifleDetailsView" />
-
                 <LinearLayout style="@style/profileDetailsLayout">
 
                     <ImageView
@@ -117,12 +63,14 @@
                     <ImageView
                         android:id="@+id/emailImageView"
                         style="@style/profileDetailsImage"
+                        android:src="@drawable/ic_baseline_email_24"
                         />
 
                     <TextView
                         style="@style/profileDetailsTextMain"
                         android:layout_toRightOf="@id/emailImageView"
-                        android:text="Email" />
+                        android:text="Email"
+                       />
 
                     <TextView
                         style="@style/profileDetailsMiniText"

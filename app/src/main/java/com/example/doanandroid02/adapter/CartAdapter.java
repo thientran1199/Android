@@ -86,7 +86,7 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.ItemHolder> {
         DecimalFormat decimalFormat = new DecimalFormat("###,###,###");
         holder.textGiaSpCrtquant.setText(decimalFormat.format(cart.giasp) + "VND");
         holder.quant.setText(decimalFormat.format(cart.soluongsp));
-        Picasso.with(context).load("http://127.0.0.1/DoAnLaravel_2/public/uploads/" + cart.getimage())
+        Picasso.with(context).load("http://192.168.1.7/DoAnLaravel_2/public/uploads/" + cart.getimage())
                 .into(holder.image);
         int soluong = Integer.parseInt(holder.quant.getText().toString());
         CartActivity.countPrice(context);
