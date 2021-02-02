@@ -107,7 +107,7 @@ public class ProductDetailsActivity extends AppCompatActivity {
         textTenChiTietSp.setText(name);
         textGiaChiTietSp.setText(decimalFormat.format(price) + "VND");
         textChiTietSp.setText(Html.fromHtml(content));
-        Picasso.with(getApplicationContext()).load("http://127.0.0.1/DoAnLaravel_2/public/uploads/" + image).into(imageChiTietSp);
+        Picasso.with(getApplicationContext()).load("http://192.168.1.7/DoAnLaravel_2/public/uploads/" + image).into(imageChiTietSp);
     }
 
     public void card() {

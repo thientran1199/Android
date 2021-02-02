@@ -53,13 +53,13 @@ public class TotalItemAdapter extends RecyclerView.Adapter<TotalItemAdapter.Item
     }
 
     @Override
-    public void onBindViewHolder(@NonNull TotalItemAdapter.ItemHolder holder, int position) {
+    public void onBindViewHolder(@NonNull ItemHolder holder, int position) {
         Cart cart = carts.get(position);
         holder.textProductNameCrt.setText(cart.tensp);
         DecimalFormat decimalFormat = new DecimalFormat("###,###,###");
         holder.textGiaSpCrtquant.setText(decimalFormat.format(cart.giasp) + "VND");
         holder.quant.setText("x" + (cart.soluongsp));
-        Picasso.with(context).load("http://127.0.0.1/DoAnLaravel_2/public/uploads/" + cart.getimage())
+        Picasso.with(context).load("http://192.168.1.7/DoAnLaravel_2/public/uploads/" + cart.getimage())
                 .into(holder.imageTotal);
         CartActivity.countPrice(context);
 

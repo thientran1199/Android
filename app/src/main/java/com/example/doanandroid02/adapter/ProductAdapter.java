@@ -81,7 +81,7 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ItemHold
         holder.textTenSp.setText(product.getName());
         DecimalFormat decimalFormat = new DecimalFormat("###,###,###");
         holder.textGiaSp.setText(decimalFormat.format(product.price) + "VND");
-        Picasso.with(context).load("http://127.0.0.1/DoAnLaravel_2/public/uploads/" + product.getImage())
+        Picasso.with(context).load("http://192.168.1.7/DoAnLaravel_2/public/uploads/" + product.getImage())
                 .resize(1000, 1000)
                 .centerCrop()
                 .into(holder.imageSanPham);
